@@ -828,7 +828,7 @@ def two_cluster_weighting(xpos, ypos, missing, downsamples, downsamp_filter, che
             j = np.array((np.argwhere(switches[p+1]).flatten()+1)*downsamples[p],dtype=int)-1
             for o in range(int(downsamples[p])):
                 for j_val in j:
-                    if 0 <= j_val+o < len(xpos):
+                    if 0 <= j_val+o < len(weighted):
                         weighted[j_val+o] = weighted[j_val+o] + switchesw[p+1]
         
         # add to totalweights
